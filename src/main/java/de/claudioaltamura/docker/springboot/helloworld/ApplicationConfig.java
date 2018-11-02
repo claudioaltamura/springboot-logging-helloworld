@@ -21,8 +21,8 @@ public class ApplicationConfig {
   }
 
   @Bean
-  public FilterRegistrationBean loggingFilterRegistration() {
-    FilterRegistrationBean registration = new FilterRegistrationBean(logFilter());
+  public FilterRegistrationBean<CommonsRequestLoggingFilter> loggingFilterRegistration() {
+    FilterRegistrationBean<CommonsRequestLoggingFilter> registration = new FilterRegistrationBean<CommonsRequestLoggingFilter>(logFilter());
 
     registration.addUrlPatterns("/helloworld");
 
